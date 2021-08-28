@@ -50,7 +50,7 @@
         (async function () {
             const data = await fetch("/data.json").then((res) => res.json());
             console.log(data.countries);
-            Object.values(data.countries)
+            data.countries
                 .forEach(country => {
                     const { lat, lng } = country.location;
                     const markerElement = createMarkers(country);
